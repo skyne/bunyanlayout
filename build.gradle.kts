@@ -18,3 +18,16 @@ dependencies {
     implementation("ch.qos.logback:logback-core:1.2.3")
     implementation("com.google.code.gson:gson:2.8.7")
 }
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "org.github.skyne"
+            artifactId = "bunyanlayout"
+            version = "0.0.2"
+
+            from(components["java"])
+        }
+    }
+}
+
